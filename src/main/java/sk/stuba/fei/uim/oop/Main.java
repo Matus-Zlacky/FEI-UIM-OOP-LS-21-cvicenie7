@@ -11,8 +11,4 @@ public class Main {
     protected void ahoj() {
         System.out.println(Main.GREETING);
     }
-
-    protected void hello() {
-        System.out.println("hello world");
-    }
 }
