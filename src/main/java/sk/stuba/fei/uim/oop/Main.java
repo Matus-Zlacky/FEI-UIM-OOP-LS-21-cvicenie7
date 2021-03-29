@@ -4,4 +4,8 @@ public class Main {
     public static void main(String[] args) {
         // zmena
     }
+
+    protected void ahoj() {
+        System.out.println("ahoj svet");
+    }
 }
