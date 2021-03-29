@@ -8,4 +8,8 @@ public class Main {
     protected void ahoj() {
         System.out.println("ahoj svet");
     }
+
+    protected void hello() {
+        System.out.println("hello world");
+    }
 }
