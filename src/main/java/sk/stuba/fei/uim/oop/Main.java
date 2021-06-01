@@ -2,13 +2,22 @@ package sk.stuba.fei.uim.oop;
 
 
 import sk.stuba.fei.uim.oop.Prednaska7_MouseListenery.MyFrameP7;
+import sk.stuba.fei.uim.oop.Prednaska8_KeyboardEventy.TestCanvas_KeyListener;
+import sk.stuba.fei.uim.oop.Prednaska8_KeyboardEventy.TestFrame_ItemListener;
+
+import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
+        //PREDNASKA 8
+        new TestFrame_ItemListener();
+
+
+
+
+
         //PREDNASKA 7
-        new MyFrameP7("stvorce");
-
-
+       // new MyFrameP7("stvorce");
 
         //PREDNASKA 6
         /*
