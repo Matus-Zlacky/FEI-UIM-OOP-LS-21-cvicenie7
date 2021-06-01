@@ -1,6 +1,10 @@
 package sk.stuba.fei.uim.oop;
 
 
+import sk.stuba.fei.uim.oop.Prednaska10_Cursory_Fonty.CloseQuestion_JDialog;
+import sk.stuba.fei.uim.oop.Prednaska10_Cursory_Fonty.FontFrame;
+import sk.stuba.fei.uim.oop.Prednaska10_Cursory_Fonty.TestFrame_CloseQ_JD;
+import sk.stuba.fei.uim.oop.Prednaska10_Cursory_Fonty.TestFrame_Cursor;
 import sk.stuba.fei.uim.oop.Prednaska7_MouseListenery.MyFrameP7;
 import sk.stuba.fei.uim.oop.Prednaska8_KeyboardEventy.MyCanvas_ScrollTest;
 import sk.stuba.fei.uim.oop.Prednaska8_KeyboardEventy.TestCanvas_KeyListener;
@@ -12,8 +16,17 @@ import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
+        //PREDNASKA 10 - cursory, fonty
+       // new TestFrame_Cursor();
+       // new FontFrame();
+        new TestFrame_CloseQ_JD();
+
+
+        //PREDNASKA 9 - subory
+
         //PREDNASKA 8
-        new TestFrame_Menu();
+        //new TestFrame_Menu();
+        //new TestFrame_ItemListener();
 
         /*  JFrame f = new JFrame();
         ScrollPane ms = new ScrollPane();               //scroll bar na pohyb po mensom Frame ako Canvase
@@ -21,16 +34,13 @@ public class Main {
         papier.setSize(500,500);
         ms.add(papier);
         f.add(ms);
-
         f.setSize(300,300);
         f.setVisible(true);*/
 
 
-        //new TestFrame_ItemListener();
-
-
         //PREDNASKA 7
        // new MyFrameP7("stvorce");
+
 
         //PREDNASKA 6
         /*
