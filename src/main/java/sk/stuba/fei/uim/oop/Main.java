@@ -2,18 +2,31 @@ package sk.stuba.fei.uim.oop;
 
 
 import sk.stuba.fei.uim.oop.Prednaska7_MouseListenery.MyFrameP7;
+import sk.stuba.fei.uim.oop.Prednaska8_KeyboardEventy.MyCanvas_ScrollTest;
 import sk.stuba.fei.uim.oop.Prednaska8_KeyboardEventy.TestCanvas_KeyListener;
 import sk.stuba.fei.uim.oop.Prednaska8_KeyboardEventy.TestFrame_ItemListener;
+import sk.stuba.fei.uim.oop.Prednaska8_KeyboardEventy.TestFrame_Menu;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
         //PREDNASKA 8
-        new TestFrame_ItemListener();
+        new TestFrame_Menu();
+
+        /*  JFrame f = new JFrame();
+        ScrollPane ms = new ScrollPane();               //scroll bar na pohyb po mensom Frame ako Canvase
+        MyCanvas_ScrollTest papier = new MyCanvas_ScrollTest();
+        papier.setSize(500,500);
+        ms.add(papier);
+        f.add(ms);
+
+        f.setSize(300,300);
+        f.setVisible(true);*/
 
 
-
+        //new TestFrame_ItemListener();
 
 
         //PREDNASKA 7
