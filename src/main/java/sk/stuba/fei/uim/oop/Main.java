@@ -5,6 +5,7 @@ import sk.stuba.fei.uim.oop.Prednaska10_Cursory_Fonty.CloseQuestion_JDialog;
 import sk.stuba.fei.uim.oop.Prednaska10_Cursory_Fonty.FontFrame;
 import sk.stuba.fei.uim.oop.Prednaska10_Cursory_Fonty.TestFrame_CloseQ_JD;
 import sk.stuba.fei.uim.oop.Prednaska10_Cursory_Fonty.TestFrame_Cursor;
+import sk.stuba.fei.uim.oop.Prednaska10_Stvorce_Kalk.MyFrameP10;
 import sk.stuba.fei.uim.oop.Prednaska7_MouseListenery.MyFrameP7;
 import sk.stuba.fei.uim.oop.Prednaska8_KeyboardEventy.MyCanvas_ScrollTest;
 import sk.stuba.fei.uim.oop.Prednaska8_KeyboardEventy.TestCanvas_KeyListener;
@@ -16,10 +17,14 @@ import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
+        //PREDNASKA 11 - stvorce, kalkulacka
+        //new MyFrameP10();
+
+
         //PREDNASKA 10 - cursory, fonty
        // new TestFrame_Cursor();
        // new FontFrame();
-        new TestFrame_CloseQ_JD();
+       // new TestFrame_CloseQ_JD();
 
 
         //PREDNASKA 9 - subory
