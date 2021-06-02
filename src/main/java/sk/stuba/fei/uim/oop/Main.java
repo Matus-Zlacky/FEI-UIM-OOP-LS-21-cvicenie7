@@ -11,12 +11,17 @@ import sk.stuba.fei.uim.oop.Prednaska8_KeyboardEventy.MyCanvas_ScrollTest;
 import sk.stuba.fei.uim.oop.Prednaska8_KeyboardEventy.TestCanvas_KeyListener;
 import sk.stuba.fei.uim.oop.Prednaska8_KeyboardEventy.TestFrame_ItemListener;
 import sk.stuba.fei.uim.oop.Prednaska8_KeyboardEventy.TestFrame_Menu;
+import sk.stuba.fei.uim.oop.SKUSKA.MyFrame;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
+        //SKUSKA19/20
+        MyFrame skuska = new MyFrame();
+
+
         //PREDNASKA 11 - stvorce, kalkulacka
         //new MyFrameP10();
 
@@ -44,7 +49,7 @@ public class Main {
 
 
         //PREDNASKA 7
-       // new MyFrameP7("stvorce");
+       //new MyFrameP7("stvorce");
 
 
         //PREDNASKA 6
