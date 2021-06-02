@@ -18,11 +18,14 @@ public class MyCanvas extends Canvas implements MouseListener, MouseMotionListen
     private Color c;
     private boolean wannaDrawPlus;
     private boolean wannaDrawUsecka;
+    private boolean zvolenaFarba;
     private int xpos = 0;
     private int ypos = 0;
 
-    private ArrayList<Tvar> ourObjects = new ArrayList<Tvar>();
-    private Tvar actObject;
+    private ArrayList<PlusKreslenie> ourPlusy = new ArrayList<PlusKreslenie>();
+    private ArrayList<UseckaKreslenie> ourUsecky = new ArrayList<UseckaKreslenie>();
+    private PlusKreslenie actObjectPlus;
+    private UseckaKreslenie actObjectUsecka;
 
     public MyCanvas(int w, int h){
         super();
@@ -30,72 +33,94 @@ public class MyCanvas extends Canvas implements MouseListener, MouseMotionListen
         height = h;
         wannaDrawPlus = false;
         wannaDrawUsecka = false;
+        zvolenaFarba = false;
+
+        addMouseMotionListener(this);
+        addMouseListener(this);
 
         setSize(width, height);
-        setFocusable(false);
-
-        repaint();
-
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
         xpos = e.getX();
         ypos = e.getY();
-        if (wannaDrawPlus) {
-            actObject = new PlusKreslenie(xpos,ypos,10,10, c);
+        if (wannaDrawPlus && zvolenaFarba) {
+            actObjectPlus = new PlusKreslenie(xpos,ypos,10,10, c);
         }
-        else if (wannaDrawUsecka) {
-            actObject = new UseckaKreslenie(xpos, ypos, xpos+10, ypos+10, c);
+        else if (wannaDrawUsecka && zvolenaFarba) {
+            actObjectUsecka = new UseckaKreslenie(xpos, ypos, xpos+100, ypos+100, c);
         }
 
     }
     @Override
     public void mouseDragged(MouseEvent e) {        // rozdelit zase IFom na usecku/plus
-     /*   int dx = e.getX();
+        int dx = e.getX();
         int dy = e.getY();
-        if (actObject != null){
+        if (actObjectUsecka != null){
+            actObjectUsecka.setX2(dx);
+            actObjectUsecka.setY2(dy);
+            repaint();
+        }
+
+        if(actObjectPlus != null){
             if (dx > xpos && dy > ypos){
-                actObject.width = dx - xpos;
-                actObject.height = dy - ypos;
+                actObjectPlus.setWidth(dx - xpos);
+                actObjectPlus.setHeight(dy - ypos);
                 repaint();
             }
             if (dx < xpos && dy > ypos){
-                actObject.x = dx;                 // meni sa X pozicia rohu
-                actObject.width = xpos - dx;
-                actObject.height = dy - ypos;
+                actObjectPlus.setXpos(dx);                 // meni sa X pozicia rohu
+                actObjectPlus.setWidth(xpos-dx);
+                actObjectPlus.setHeight(dy - ypos);
                 repaint();
             }
             if (dx > xpos && dy < ypos){
-                actObject.y = dy;
-                actObject.width = dx - xpos;
-                actObject.height = ypos - dy;
+                actObjectPlus.setYpos(dy);
+                actObjectPlus.setWidth(dx-xpos);
+                actObjectPlus.setHeight(ypos-dy);
                 repaint();
             }
             if (dx < xpos && dy < ypos){
-                actObject.x = dx;
-                actObject.y = dy;
-                actObject.width = xpos - dx;
-                actObject.height = ypos - dy;
+                actObjectPlus.setXpos(dx);
+                actObjectPlus.setYpos(dy);
+                actObjectPlus.setWidth(xpos-dx);
+                actObjectPlus.setHeight(ypos-dy);
                 repaint();
             }
-        }*/
+        }
+
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        ourObjects.add(actObject);
-        repaint();
-        actObject = null;
+        if(actObjectUsecka != null) {
+            ourUsecky.add(actObjectUsecka);
+            repaint();
+            actObjectUsecka = null;
+        }
+
+        if(actObjectPlus != null) {
+            ourPlusy.add(actObjectPlus);
+            repaint();
+            actObjectPlus = null;
+        }
     }
 
     public void paint(Graphics g){
-        for (Tvar o : ourObjects){
-            o.paintTvar(g);
+        for (UseckaKreslenie usecka : ourUsecky){
+            usecka.paintTvar(g);
         }
-        if (actObject != null){   // ešte ho len taham po ploche, neni v zozname
-            actObject.paintTvar(g);
+        for (PlusKreslenie plus : ourPlusy){
+            plus.paintTvar(g);
         }
+        if (actObjectPlus != null){   // ešte ho len taham po ploche, neni v zozname
+            actObjectPlus.paintTvar(g);
+        }
+        if (actObjectUsecka != null){   // ešte ho len taham po ploche, neni v zozname
+            actObjectUsecka.paintTvar(g);
+        }
+
     }
 
     @Override

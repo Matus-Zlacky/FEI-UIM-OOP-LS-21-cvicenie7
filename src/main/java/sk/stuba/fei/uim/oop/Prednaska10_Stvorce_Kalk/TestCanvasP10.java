@@ -72,6 +72,7 @@ public class TestCanvasP10 extends Canvas implements MouseListener, MouseMotionL
         if (actObdlznik != null){   // ešte ho len taham po ploche, neni v zozname
             actObdlznik.paintObldznik(g);
         }
+
     }
 
     @Override

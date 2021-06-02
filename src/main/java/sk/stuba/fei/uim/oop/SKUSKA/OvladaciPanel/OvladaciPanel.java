@@ -31,7 +31,6 @@ public class OvladaciPanel extends JPanel implements ItemListener {
         farba.addItemListener(this);
         label = new JLabel("text");
 
-
         add(plus);
         add(usecka);
         add(farba);
@@ -48,16 +47,19 @@ public class OvladaciPanel extends JPanel implements ItemListener {
                 case "BLUE":
                     label.setForeground(Color.BLUE);
                     label.setText("Testovací text");
+                    can.setZvolenaFarba(true);
                     can.setC(Color.BLUE);
                     break;
                 case "GREEN":
                     label.setForeground(Color.GREEN);
                     label.setText("Testovací text");
+                    can.setZvolenaFarba(true);
                     can.setC(Color.GREEN);
                     break;
                 case "RED":
                     label.setForeground(Color.RED);
                     label.setText("Testovací text");
+                    can.setZvolenaFarba(true);
                     can.setC(Color.RED);
                     break;
                 default:
