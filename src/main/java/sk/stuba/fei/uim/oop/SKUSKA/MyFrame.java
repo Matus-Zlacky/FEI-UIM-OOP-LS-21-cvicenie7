@@ -5,14 +5,10 @@ import sk.stuba.fei.uim.oop.SKUSKA.OvladaciPanel.OvladaciPanel;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
 
 public class MyFrame extends JFrame {
-    private int width;
-    private int height;
+    private final int width;
+    private final int height;
 
 
     public MyFrame(){

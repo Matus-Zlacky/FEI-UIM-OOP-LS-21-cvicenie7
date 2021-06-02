@@ -2,7 +2,6 @@ package sk.stuba.fei.uim.oop.SKUSKA.Kreslenie;
 
 import lombok.Getter;
 import lombok.Setter;
-import sk.stuba.fei.uim.oop.Prednaska10_Stvorce_Kalk.Obdlznik;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -114,6 +113,7 @@ public class MyCanvas extends Canvas implements MouseListener, MouseMotionListen
         for (PlusKreslenie plus : ourPlusy){
             plus.paintTvar(g);
         }
+
         if (actObjectPlus != null){   // ešte ho len taham po ploche, neni v zozname
             actObjectPlus.paintTvar(g);
         }

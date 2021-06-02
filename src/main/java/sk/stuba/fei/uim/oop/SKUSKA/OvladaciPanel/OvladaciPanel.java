@@ -8,11 +8,11 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
 public class OvladaciPanel extends JPanel implements ItemListener {
-    private MyCanvas can;
-    private JButton usecka;
-    private JButton plus;
-    private Choice farba;
-    private JLabel label;
+    private final MyCanvas can;
+    private final JButton usecka;
+    private final JButton plus;
+    private final Choice farba;
+    private final JLabel label;
 
 
 

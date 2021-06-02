@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 
 @Getter
 public class UseckaButton extends JButton implements ActionListener {
-    private MyCanvas can;
+    private final MyCanvas can;
 
 
     public UseckaButton(String nazov, MyCanvas canvas){

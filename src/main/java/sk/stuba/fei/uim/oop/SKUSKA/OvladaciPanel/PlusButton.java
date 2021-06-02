@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 
 @Getter
 public class PlusButton extends JButton implements ActionListener {
-    private MyCanvas can;
+    private final MyCanvas can;
 
     public PlusButton(String nazov, MyCanvas canvas){
         super(nazov);
